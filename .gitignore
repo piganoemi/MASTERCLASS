@@ -2,6 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-/data
-/temp
-/docs
+data/
+temp/
+docs/
