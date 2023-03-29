@@ -1,0 +1,55 @@
+---
+title: 'RAGE: Check Data'
+author: "Noemi Nicole Piga"
+date: "29th March 2023"
+output: 
+  html_document:
+  theme: cerulean
+---
+  
+```{r setup, include=FALSE}
+library(tidyverse)
+library(fs)
+
+# cache folder
+cache    <- "C:/Users/nnp5/OneDrive - University of Leicester/PhD_2021_2025/Training/2nd_year/Rmarkdown_Git_Masterclass/TUTORIAL/data/cache"
+
+# set chunk options
+knitr::opts_chunk$set(echo = FALSE, 
+                      fig.align = "center",
+                      message=FALSE)
+```
+
+## Background
+
+Read raw data with script read_data.R.
+
+## Warning Messages
+
+```{r}
+readLines(path(cache, "read_log.txt"))
+```
+
+## Patient Data
+
+```{r}
+readRDS(path(cache, "patients.rds"))
+```
+
+## Expression Data
+
+```{r}
+readRDS(path(cache, "expression.rds"))
+```
+
+## Training Data
+
+```{r}
+readRDS(path(cache, "training.rds"))
+```
+
+## Validation Data
+
+```{r}
+readRDS(path(cache, "validation.rds"))
+```
